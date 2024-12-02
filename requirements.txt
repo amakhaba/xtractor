@@ -1,0 +1,5 @@
+django
+django-debug-toolbar==4.1.0
+pillow==11.0.0
+mysqlclient==2.2.4
+numpy

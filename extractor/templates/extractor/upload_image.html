@@ -1,0 +1,14 @@
+{% extends 'index/header.html' %}
+{% block title %} Upload Image {% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Upload an Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit">Upload</button>
+    </form>
+</div>
+{% endblock %}

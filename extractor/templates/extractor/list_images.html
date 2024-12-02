@@ -1,0 +1,24 @@
+{% extends 'index/header.html' %}
+{% block title %} Image Upload - Success {% endblock %}
+{% block content %}
+<div class="container">
+    <br><br><br><br>
+    <h1>Uploaded Images</h1>
+
+    <div class="image-list">
+        {% for image in all_images %}
+            <div class="image-item">
+                <a href="{% url 'image_detail' image.id %}">
+                    <img src="{{ image.image.url }}" alt="{{ image.name }}" style="width: 150px; height: auto;" alt="Uploaded Image">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="button-container">
+        <a href="{% url 'upload_image' %}">
+            <button>Upload Another Image</button>
+        </a>
+    </div>
+</div>
+{% endblock %}
